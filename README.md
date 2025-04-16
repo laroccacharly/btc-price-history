@@ -23,3 +23,24 @@ Based on the processed data:
 *   **Price at Minimum Timestamp**: 4.7 USD
 *   **Price at Maximum Timestamp**: 84175.9 USD
 
+## Example Usage (`example.py`)
+
+The `example.py` script demonstrates how to download the Parquet file directly from the GitHub repository and load it into a pandas DataFrame:
+
+```python
+import pandas as pd
+
+
+url = "https://github.com/laroccacharly/btc-price-history/raw/refs/heads/main/btc_price_history.parquet"
+
+print(f"Downloading and reading parquet file from: {url}")
+
+df = pd.read_parquet(url)
+
+print("\n--- DataFrame Info ---")
+df.info()
+
+print("\n--- DataFrame Head ---")
+print(df.head())
+```
+
